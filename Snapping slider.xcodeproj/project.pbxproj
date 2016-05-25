@@ -12,6 +12,7 @@
 		385CB37F1CF534AD00653EA2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385CB37D1CF534AD00653EA2 /* Main.storyboard */; };
 		385CB3811CF534AD00653EA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385CB3801CF534AD00653EA2 /* Assets.xcassets */; };
 		385CB3841CF534AD00653EA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 385CB3821CF534AD00653EA2 /* LaunchScreen.storyboard */; };
+		385CB38C1CF534D000653EA2 /* SnappingSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385CB38B1CF534D000653EA2 /* SnappingSlider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		385CB3801CF534AD00653EA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		385CB3831CF534AD00653EA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		385CB3851CF534AD00653EA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		385CB38B1CF534D000653EA2 /* SnappingSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnappingSlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				385CB3791CF534AD00653EA2 /* AppDelegate.swift */,
 				385CB37B1CF534AD00653EA2 /* ViewController.swift */,
+				385CB38B1CF534D000653EA2 /* SnappingSlider.swift */,
 				385CB37D1CF534AD00653EA2 /* Main.storyboard */,
 				385CB3801CF534AD00653EA2 /* Assets.xcassets */,
 				385CB3821CF534AD00653EA2 /* LaunchScreen.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					385CB3751CF534AD00653EA2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = CUMF4ZAER2;
 					};
 				};
 			};
@@ -136,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				385CB37C1CF534AD00653EA2 /* ViewController.swift in Sources */,
+				385CB38C1CF534D000653EA2 /* SnappingSlider.swift in Sources */,
 				385CB37A1CF534AD00653EA2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,10 +252,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Snapping slider/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Tom.Snapping-slider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -258,10 +267,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Snapping slider/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Tom.Snapping-slider";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
