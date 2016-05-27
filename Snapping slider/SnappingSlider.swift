@@ -134,6 +134,8 @@ public class SnappingSlider: UIView {
 
         
         sliderContainer.frame = frame
+        print(frame)
+        print(bounds)
         sliderContainer.center = CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5)
         sliderContainer.backgroundColor = incrementAndDecrementBackgroundColor
 
@@ -149,8 +151,20 @@ public class SnappingSlider: UIView {
         plusLabel.font = incrementAndDecrementLabelFont
         plusLabel.textColor = incrementAndDecrementLabelTextColor
         
-        
-        sliderView.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.5, bounds.size.width)
+        //上下
+        upLabel.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.25, bounds.size.height * 0.25)
+        upLabel.center = CGPointMake(bounds.width * 0.5,  upLabel.bounds.height * 0.5)
+        upLabel.backgroundColor = incrementAndDecrementBackgroundColor
+        upLabel.font = incrementAndDecrementLabelFont
+        upLabel.textColor = incrementAndDecrementLabelTextColor
+            
+        downLabel.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.25, bounds.size.height * 0.25)
+        downLabel.center = CGPointMake(bounds.width * 0.5,  bounds.size.height - upLabel.bounds.height * 0.5)
+        downLabel.backgroundColor = incrementAndDecrementBackgroundColor
+        downLabel.font = incrementAndDecrementLabelFont
+        downLabel.textColor = incrementAndDecrementLabelTextColor
+
+        sliderView.frame = CGRectMake(0.0, 0.0, bounds.size.width * 0.5, bounds.size.height * 0.5)
         sliderView.center = CGPointMake(bounds.size.width * 0.5, bounds.size.height * 0.5)
         sliderView.backgroundColor = sliderColor
         
@@ -160,18 +174,6 @@ public class SnappingSlider: UIView {
         sliderViewLabel.font = incrementAndDecrementLabelFont
         sliderViewLabel.text = sliderTitleText
         
-        //上下
-        upLabel.frame = CGRectMake(0.0, 0.0, sliderView.bounds.size.width, sliderView.bounds.size.height)
-        upLabel.center = CGPointMake(sliderViewLabel.bounds.width * 0.5,  sliderViewLabel.bounds.height * 0)
-        upLabel.backgroundColor = sliderColor
-        upLabel.font = incrementAndDecrementLabelFont
-        upLabel.text = "下"
-        
-        downLabel.frame = CGRectMake(0.0, 0.0, sliderView.bounds.size.width, sliderView.bounds.size.height)
-        downLabel.center = CGPointMake(sliderViewLabel.bounds.width * 0.5,  sliderViewLabel.bounds.height * 1)
-        downLabel.backgroundColor = sliderColor
-        downLabel.font = incrementAndDecrementLabelFont
-        downLabel.text = "上"
 
         
         layer.cornerRadius = sliderCornerRadius
@@ -275,19 +277,18 @@ public class SnappingSlider: UIView {
         sliderContainer.addSubview(plusLabel)
         
 
+        //上下
+        upLabel.text = "上"
+        upLabel.textAlignment = NSTextAlignment.Center
+        sliderContainer.addSubview(upLabel)
+        
+        downLabel.text = "下"
+        downLabel.textAlignment = NSTextAlignment.Center
+        sliderContainer.addSubview(downLabel)
+
         sliderContainer.addSubview(sliderView)
 
         
-        //上下
-        upLabel.userInteractionEnabled = false
-        upLabel.textAlignment = NSTextAlignment.Center
-        upLabel.textColor = sliderTitleColor
-        sliderView.addSubview(upLabel)
-        
-        downLabel.userInteractionEnabled = false
-        downLabel.textAlignment = NSTextAlignment.Center
-        downLabel.textColor = sliderTitleColor
-        sliderView.addSubview(downLabel)
 
         sliderViewLabel.userInteractionEnabled = false
         sliderViewLabel.textAlignment = NSTextAlignment.Center
